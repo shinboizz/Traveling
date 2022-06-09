@@ -1,0 +1,6 @@
+E:\website_travel\Website Travel\QLBH\Common\bin\Release\Common.dll
+E:\website_travel\Website Travel\QLBH\Common\bin\Release\Common.pdb
+E:\website_travel\Website Travel\QLBH\Common\obj\Release\Common.csprojAssemblyReference.cache
+E:\website_travel\Website Travel\QLBH\Common\obj\Release\Common.csproj.CoreCompileInputs.cache
+E:\website_travel\Website Travel\QLBH\Common\obj\Release\Common.dll
+E:\website_travel\Website Travel\QLBH\Common\obj\Release\Common.pdb

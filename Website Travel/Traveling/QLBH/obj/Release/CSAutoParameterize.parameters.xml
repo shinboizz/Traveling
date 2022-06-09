@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="Web_QLBH-Web.config Connection String" description="Web_QLBH Connection String used in web.config by the application to access the database." defaultValue="Data Source=DESKTOP-QF2UV5Q;Initial Catalog=QLBH_Web;Integrated Security=True;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\website_travel\\Website\ Travel\\QLBH\\QLBH\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Web_QLBH']/@connectionString" />
+  </parameter>
+  <parameter name="Web_QLBH_DatabasePublish-Web.config Connection String" description="Web_QLBH_DatabasePublish Connection String used in web.config by the application to access the database." defaultValue="Data Source=DESKTOP-QF2UV5Q;Initial Catalog=QLBH_Web;Integrated Security=True;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\website_travel\\Website\ Travel\\QLBH\\QLBH\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Web_QLBH_DatabasePublish']/@connectionString" />
+  </parameter>
+</parameters>
