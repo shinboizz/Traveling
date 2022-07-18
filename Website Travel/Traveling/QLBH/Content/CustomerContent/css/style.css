@@ -2219,7 +2219,7 @@ textarea:focus {
 .product_desc .product_desc_info .product_name {
 	color: #0363cd;
 	display: block;
-	font-size: 14px;
+	font-size: 20px;
 	font-weight: 500;
 	line-height: 18px;
 	text-transform: capitalize;
@@ -2241,7 +2241,7 @@ textarea:focus {
 .featured-price-box .new-price,
 .featured-price-box .new-price-2{
   color: #2f333a;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 500;
   padding-right: 10px;
 }
@@ -2256,7 +2256,7 @@ textarea:focus {
 }
  .product_desc .product_desc_info .old-price {
   color: #666;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 400;
   text-decoration: line-through;
 }

@@ -23,5 +23,12 @@ namespace Model.Dao
                 return false;
             }
         }
+
+        public List<GioHang> GetList()
+        {
+            List<GioHang> list = new List<GioHang>();
+            list = db.GioHangs.ToList();
+            return list;
+        }
     }
 }

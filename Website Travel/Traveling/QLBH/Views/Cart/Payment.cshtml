@@ -14,8 +14,8 @@
     <div class="container">
         <div class="breadcrumb-content">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="active">Checkout</li>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li class="active">Thanh Toán</li>
             </ul>
         </div>
     </div>
@@ -74,25 +74,25 @@
                 @using (Html.BeginForm("Payment", "Cart", FormMethod.Post))
                 {
                     <div class="checkbox-form">
-                        <h3>Billing Details</h3>
+                        <h3>Hóa Đơn Thanh Toán</h3>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="checkout-form-list">
                                     <label>
-                                        Name <span class="required">*</span>
+                                        Họ Và Tên <span class="required">*</span>
                                     </label>
                                     <input name="shipName" placeholder="" type="text">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="checkout-form-list">
-                                    <label>Phone Number <span class="required">*</span></label>
+                                    <label>Số Điện Thoại <span class="required">*</span></label>
                                     <input name="mobile" type="text">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="checkout-form-list">
-                                    <label>Address <span class="required">*</span></label>
+                                    <label>Địa Chỉ <span class="required">*</span></label>
                                     <input name="address" placeholder="" type="text">
                                 </div>
                             </div>
@@ -107,13 +107,13 @@
                     </div>
                     <div class="col-lg-12 col-12">
                         <div class="your-order">
-                            <h3>ORDER</h3>
+                            <h3>Giỏ Hàng</h3>
                             <div class="your-order-table table-responsive">
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th class="cart-product-name">Products</th>
-                                            <th class="cart-product-total">Total</th>
+                                            <th class="cart-product-name">Sản PHẩm</th>
+                                            <th class="cart-product-total">Tổng:</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -121,7 +121,7 @@
                                         {
                                             <tr class="cart_item">
                                                 <td class="cart-product-name">@item.Product.TenSP<strong class="product-quantity"> × @item.Quantity</strong></td>
-                                                <td class="cart-product-total"><span class="amount">@(item.Product.DonGia.GetValueOrDefault(0) * item.Quantity)</span></td>
+                                                <td class="cart-product-total"><span class="amount">@(item.Product.DonGia.GetValueOrDefault(0) * item.Quantity) VND</span></td>
                                             </tr>
                                         }
                                     </tbody>
@@ -144,15 +144,15 @@
                                             <div class="card-header" id="#payment-1">
                                                 <h5 class="panel-title">
                                                     <a class="" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                        Transfer money via bank account
+                                                        Thanh Toán Với Internet Banking
                                                     </a>
                                                 </h5>
                                             </div>
                                             <div id="collapseOne" class="collapse show" data-parent="#accordion">
                                                 <div class="card-body">
-                                                    <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+                                                    <p>Thực hiện thanh toán của bạn trực tiếp vào tài khoản ngân hàng của chúng tôi. Vui lòng sử dụng ID đơn đặt hàng của bạn làm tham chiếu thanh toán. Đơn đặt hàng của bạn sẽ không được giao cho đến khi tiền hết trong tài khoản của chúng tôi.</p>
                                                     <a>
-                                                        My account number: 191 292 393 444 -  VIETCOMBANK - IRONMAN
+                                                        Tài Khoản: 191 292 393 444 -  VIETCOMBANK - IRONMAN
                                                     </a>
                                                 </div>
                                             </div>
@@ -162,13 +162,14 @@
                                                 <h5 class="panel-title">
                                                     <a class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
 
-                                                        Payment by card
+                                                       Thanh Toán Bằng Thẻ
                                                     </a>
                                                 </h5>
                                             </div>
                                             <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                                                <img src="~/Content/CustomerContent/images/payment/qrcode.png" style="height: 280px;width: 280px;" alt="Li's Static Banner">
                                                 <div class="card-body">
-                                                    <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
+                                                    <p>Thực hiện thanh toán của bạn trực tiếp vào tài khoản ngân hàng của chúng tôi. Vui lòng sử dụng ID đơn đặt hàng của bạn làm tham chiếu thanh toán. Đơn đặt hàng của bạn sẽ không được giao cho đến khi tiền hết trong tài khoản của chúng tôi.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -182,7 +183,7 @@
                                             </div>
                                             <div id="collapseThree" class="collapse" data-parent="#accordion">
                                                 <div class="card-body">
-                                                    <p>Use paypal account to login</p>
+                                                    <p>Sử Dụng Thanh Toán Bằng Paypal</p>
                                                     <a>https://www.paypal.com/vn/home</a>
                                                 </div>
                                             </div>
@@ -191,19 +192,19 @@
                                             <div class="card-body" id="#payment-4">
                                                 <h5 class="panel-title">
                                                     <a class="collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
-                                                        Payment on delivery
+                                                        Thanh Toán Khi Nhận Hàng
                                                     </a>
                                                 </h5>
                                             </div>
                                             <div id="collapseFour" class="collapse" data-parent="#accordion">
                                                 <div class="card-body">
-                                                    <p>Pay after receiving the product and checking</p>
+                                                    <p>Thanh Toán Khi Nhận Được Hàng Và Có Thể Đổi Trả</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="order-button-payment">
-                                        <input value="Pay" type="submit">
+                                        <input value="Xác Nhận" type="submit">
                                     </div>
                                 </div>
                             </div>

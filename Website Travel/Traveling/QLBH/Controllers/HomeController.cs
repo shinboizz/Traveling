@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Model.Dao;
 using QLBH.Models;
 using QLBH.Common;
+using Model.EF;
 
 namespace QLBH.Controllers
 {
@@ -23,9 +24,37 @@ namespace QLBH.Controllers
         {
             return View();
         }
+        public ActionResult Create(LienHe lienHe)
+        {
+            try
+            {
+                MyDB db = new MyDB();
+
+                LienHe LH = new LienHe();
+                LH.NgayTao = DateTime.Now;
+                LH.customerName = lienHe.customerName;
+                LH.customerEmail = lienHe.customerEmail;
+                LH.contactSubject = lienHe.contactSubject;
+                LH.contactMessage = lienHe.contactMessage;
+                
+                db.LienHes.Add(LH);
+
+                db.SaveChanges();
+
+                //int lastestLienHe = LH.ID;
+
+            }
+           catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return RedirectToAction("Contact", "Home");
+        }
+
         public ActionResult Success()
         {
-            return View();
+            return View("Contact", "Home");
         }
         public ActionResult About()
         {
@@ -33,7 +62,13 @@ namespace QLBH.Controllers
             var result = dao.GetList();
             return View(result);
         }
-        
+
+        public ActionResult Item(int status)
+        {
+            var dao = new ProductDao();
+            var result = dao.GetByStatus(status);
+            return View(result);
+        }
         public ActionResult NewsProduct(int status)
         {
             var dao = new ProductDao();

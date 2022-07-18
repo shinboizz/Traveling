@@ -19,12 +19,12 @@
                                 <img src="~/Content/CustomerContent/images/slider/@slide.Anh" />
                                 <div class="slider-progress"></div>
                                 <div class="slider-content">
-                                    <h5>Sale Offer <span>-20% Off</span> This Week</h5>
-                                    <h1>You'll fall in love with India | India</h1>
-                                    <p>Explore India from Kashmir to Kaniyakumari</p>
-                                    <h3 class="slide-btn">Starting at <span>$200</span></h3>
+                                    <h5>Sale Offer <span>Giảm giá 20% </span> Vào mùa hè này</h5>
+                                    <h1>Khám phá du lịch Trong nước || Ngoài nước</h1>
+                                    <p>Những địa điểm du lịch thú vị</p>
+                                    <h3 class="slide-btn">Chỉ với  <span>2.000.000 VND</span></h3>
                                     <div class="default-btn slide-btn">
-                                        <a class="links" href="shop-left-sidebar.html">Booking Now</a>
+                                        <a class="links" href="#product">Đặt hàng ngay</a>
                                     </div>
                                 </div>
                             </div>
@@ -38,18 +38,18 @@
             <div class="col-lg-4 col-md-4 text-center pt-sm-30 pt-xs-30">
                 <div style="display: inline;">
                     <div style=" border-bottom: 2px solid #C7C7AB; background-color: #246996;">
-                        <h1 style="text-shadow: 1px 1px 1px rgb(221, 222, 229); margin: 20px 0;color: sandybrown;">List of featured events in India<br /><span style=" font-size: 0.7em; text-shadow: 1px 1px 1px rgb(100, 100, 100);">- Welcome to India -</span></h1>
-                        <span><h2 class="ont-family: 'Roboto', sans-serif;font-weight: bold;font-size: 1.6em;">Bulletin Board</h2></span>
+                        <h1 style="text-shadow: 1px 1px 1px rgb(221, 222, 229); margin: 20px 0;color: sandybrown;">Danh sách tin tức về các địa điểm du lịch<br /><span style=" font-size: 0.7em; text-shadow: 1px 1px 1px rgb(100, 100, 100);">- Chào mừng đến với chúng tôi -</span></h1>
+                        <span><h2 class="ont-family: 'Roboto', sans-serif;font-weight: bold;font-size: 1.6em;">Bảng Thông Tin</h2></span>
                         <div class="li-banner">
-                            <a href="https://www.holidify.com/places/goa/basilica-of-bom-jesus-sightseeing-1840.html">
-                                <img src="~/Content/CustomerContent/images/banner/home1.jpeg" alt="">
-                                <h5 class="alert-success">Basilica of Bom Jesus</h5>
+                            <a href="https://vnexpress.net/goi-y-trai-nghiem-du-lich-hue-4186026.htmll">
+                                <img src="~/Content/CustomerContent/images/banner/danhthanghue.png" alt="">
+                                <h5 class="alert-success">Huế là điểm du lịch được nhiều người yêu thích.</h5>
                             </a>
                         </div>
                         <div class="li-banner">
-                            <a href="https://www.timeanddate.com/holidays/india/holi">
-                                <img src="~/Content/CustomerContent/images/banner/home2.jpg" alt="">
-                                <h5 class="alert-success">Holi, often referred to as the "Festival of Colors"</h5>
+                            <a href="http://dulich24.com.vn/du-lich-thanh-pho-ha-long/vinh-ha-long-id-6528">
+                                <img src="~/Content/CustomerContent/images/banner/vinhhalong.png" alt="">
+                                <h5 class="alert-success"> Vịnh Hạ Long được UNESCO công nhận là di sản thiên nhiên thế giới . "</h5>
                             </a>
                         </div>
                     </div>
@@ -60,41 +60,35 @@
     </div>
     <!-- Slider With Banner Area End Here -->
     <!-- Begin Static Top Area -->
-    <div class="static-top-wrap">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="static-top-content mt-sm-30">
-                        Gift Special: Gift every single day on Weekends - New Coupon code "
-                        <span>LimupaSaleoff</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+   
     <!-- Static Top Area End Here -->
     <!-- product-area start -->
-    <div class="product-area pt-55 pb-25 pt-xs-50">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="li-product-tab">
-                        <ul class="nav li-product-menu">
-                            <li><a class="active" data-toggle="tab" href="#li-new-product"><span>Tour</span></a></li>
-                            <li><a data-toggle="tab" href="#li-bestseller-product"><span>Hotel</span></a></li>
-                            <li><a data-toggle="tab" href="#li-featured-product"><span>Travel items</span></a></li>
-                        </ul>
+    <div id="product">
+        <div class="product-area pt-55 pb-25 pt-xs-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="li-product-tab">
+                            <ul class="nav li-product-menu">
+                                <li><a class="active" data-toggle="tab" href="#li-new-product"><span>Tour-Trong Nước</span></a></li>
+                                <li><a data-toggle="tab" href="#li-bestseller-product"><span>Tour-Ngoài Nước</span></a></li>
+                                <li><a data-toggle="tab" href="#li-featured-product"><span>Khách sạn</span></a></li>
+                                <li><a data-toggle="tab" href="#li-item-product"><span>Vật Dụng</span></a></li>
+                            </ul>
+                        </div>
+                        <!-- Begin Li's Tab Menu Content Area -->
                     </div>
-                    <!-- Begin Li's Tab Menu Content Area -->
                 </div>
-            </div>
-            <div class="tab-content">
-                @*Sản phẩm mới*@
-                @Html.Action("NewsProduct", "Home", new { @status = 1 })
-                @*Sản phẩm bán chạy*@
-                @Html.Action("BestSeller", "Home", new { @status = 2 })
-                @*Sản phẩm nổi bật*@
-                @Html.Action("Featured", "Home", new { @status = 3 })
+                <div class="tab-content">
+                    @*Sản phẩm mới*@
+                    @Html.Action("NewsProduct", "Home", new { @status = 1 })
+                    @*Sản phẩm bán chạy*@
+                    @Html.Action("BestSeller", "Home", new { @status = 2 })
+                    @*Sản phẩm nổi bật*@
+                    @Html.Action("Featured", "Home", new { @status = 3 })
+
+                    @Html.Action("Item", "Home", new { @status = 4 })
+                </div>
             </div>
         </div>
     </div>
@@ -102,10 +96,10 @@
     <div class="container">
         <div class="heading_container">
             <h2>
-                OFFERS
+                ƯU ĐÃI
             </h2>
             <p>
-                List of best offers
+                Danh sách các ưu đãi
             </p>
         </div>
         <!-- Begin Li's Tab Menu Content Area -->
@@ -120,7 +114,7 @@
             <div class="col-lg-6">
                 <div class="single-banner pb-sm-30 pb-xs-30">
                     <a href="#">
-                        <img src="~/Content/CustomerContent/images/banner/span1.png" alt="Li's Static Banner">
+                        <img src="~/Content/CustomerContent/images/banner/offer1.png" alt="Li's Static Banner">
                     </a>
                 </div>
             </div>
@@ -129,7 +123,7 @@
             <div class="col-lg-6">
                 <div class="single-banner">
                     <a href="#">
-                        <img src="~/Content/CustomerContent/images/banner/span2.png" alt="Li's Static Banner">
+                        <img src="~/Content/CustomerContent/images/banner/offer2.png" alt="Li's Static Banner">
                     </a>
                 </div>
             </div>
@@ -144,131 +138,49 @@
     <div class="container">
         <div class="heading_container">
             <h2>
-                ACHIEVEMENTS
+                Giải thưởng
             </h2>
             <p>
-                List of noble awards
+                Danh sách các giải thưởng, thành tích đã đạt được
             </p>
         </div>
 
         <div class="row">
             <div class="col-lg-4">
                 <img src="~/Content/CustomerContent/images/menu/logo/a-1.png" alt="">
-                <h2 class="fw-normal">Photo Award</h2>
+                <h2 class="fw-normal">Selfie cùng Traveling</h2>
                 <h6>
-                    Photo session
+                    Hơn 5000 bức ảnh
                 </h6>
                 <p>
-                    places with the best photo locations
+                    Các địa điểm du lịch được giới thiệu để chụp dảnh đẹp nhất
                 </p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 <img src="~/Content/CustomerContent/images/menu/logo/a-2.png" alt="">
-                <h2 class="fw-normal">Group Award</h2>
+                <h2 class="fw-normal">Group Cùng Traveling</h2>
                 <h6>
-                    1000+ customers
+                    1000+ Khách hàng
                 </h6>
                 <p>
-                    Where to develop teamwork
+                    Nơi để phát triển kĩ năng teamwork các nhóm bạn bè, công ty, lớp học.
                 </p>
 
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 <img src="~/Content/CustomerContent/images/menu/logo/a-3.png" alt="">
-                <h2 class="fw-normal">Creative Award</h2>
+                <h2 class="fw-normal">Storage cùng Traveling</h2>
                 <h6>
-                    Archive photograhs
+                    1000gb lưu trữ cho mỗi đơn hàng
                 </h6>
                 <p>
-                    where the creation of adventures
+                    Nơi lưu trữ các hình ảnh, video, kỉ niệm tốt nhất.
                 </p>
             </div>
         </div>
     </div>
 </section>
 
-<p>            </p>
-<p>            </p>
-<p>            </p>
-<p>            </p>
 
-    <div class="col-lg-12" style="margin-top: 60px;">
-        <div class="container">
-            <div class="heading_container">
-                <h2>
-                    CUSTOMERS  REVIEW
-                </h2>
-                <p>
-                    List of customer reviews
-                </p>
-            </div>
-
-            <div class="container marketing">
-
-                <!-- Three columns of text below the carousel -->
-                <div class="row">
-                    <div class="col-lg-4">
-                        <img src="~/Content/CustomerContent/images/customer/man1.jpg" style="width:50%; height: 225px;" alt="">
-                        <h2 class="fw-normal">Pakoijla</h2>
-                        <p>Travel experience is really like</p>
-                        
-                    </div><!-- /.col-lg-4 -->
-                    <div class="col-lg-4">
-                        <img src="~/Content/CustomerContent/images/customer/man2.jpg" style="width:50%; height: 225px;" alt="">
-                        <h2 class="fw-normal">David Beckham</h2>
-                        <p>This is my first trip to India. It's great</p>
-                       
-                    </div><!-- /.col-lg-4 -->
-                    <div class="col-lg-4">
-                        <img src="~/Content/CustomerContent/images/customer/girl1.jpg" style="width:50%; height: 225px;" alt="">
-                        <h2 class="fw-normal">Kim ji Soo</h2>
-                        <p>Feels like yesterday, so good</p>
-                        
-                    </div><!-- /.col-lg-4 -->
-                </div><!-- /.row -->
-                <!-- START THE FEATURETTES -->
-
-                <hr class="featurette-divider">
-
-                <div class="row featurette">
-                    <div class="col-md-7">
-                        <h2 class="featurette-heading fw-normal lh-1">TravelOnline was a great  <span class="text-muted">company to deal with.</span></h2>
-                        <p class="lead">Excellent! Very good service from beginning to end. Even with a COVID-related delay in the middle of it, Lisa stayed in contact with us and got us a reschedule with the utmost of ease. Thank you!</p>
-                    </div>
-                    <div class="col-md-5">
-                        <img src="~/Content/CustomerContent/images/customer/man3.jpg" style="width:50%; height: 400px;" alt="">
-                    </div>
-                </div>
-
-                <hr class="featurette-divider">
-
-                <div class="row featurette">
-                    <div class="col-md-7 order-md-2">
-                        <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-                        <p class="lead">Travel Online managed to secure us a free night in our chosen motel. Service was prompt, and will use the service again. - Ben Rector</p>
-                    </div>
-                    <div class="col-md-5 order-md-1">
-                        <img src="~/Content/CustomerContent/images/customer/girl2.jpg" style="width:50%; height: 400px;" alt="">
-                    </div>
-                </div>
-
-                <hr class="featurette-divider">
-
-                <div class="row featurette">
-                    <div class="col-md-7">
-                        <h2 class="featurette-heading fw-normal lh-1">Thank you for keeping me up-to-date <span class="text-muted">with our booking.</span></h2>
-                        <p class="lead">
-                            Lisa helped us we everything we needed to book our trip and we would highly recommend to friends and family!
-
-                            - Lauren Brauer
-                        </p>
-                    </div>
-                    <div class="col-md-5">
-                            <img src="~/Content/CustomerContent/images/customer/man1.jpg" style="width:50%; height: 400px;" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-            </div>
 
             <!-- Li's Static Home Area End Here -->

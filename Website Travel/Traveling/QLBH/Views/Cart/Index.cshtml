@@ -16,8 +16,8 @@
     <div class="container">
         <div class="breadcrumb-content">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="active">Cart</li>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li class="active">Giỏ Hàng</li>
             </ul>
         </div>
     </div>
@@ -33,12 +33,12 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th class="li-product-remove">Delete</th>
-                                    <th class="li-product-thumbnail">Photo Products</th>
-                                    <th class="cart-product-name">Name Products</th>
-                                    <th class="li-product-price">Price</th>
-                                    <th class="li-product-quantity">Number</th>
-                                    <th class="li-product-subtotal">Sum</th>
+                                    <th class="li-product-remove">Bỏ Chọn</th>
+                                    <th class="li-product-thumbnail">Hình Ảnh</th>
+                                    <th class="cart-product-name">Tên Sản Phẩm</th>
+                                    <th class="li-product-price">Giá</th>
+                                    <th class="li-product-quantity">Số Lượng</th>
+                                    <th class="li-product-subtotal">Tổng </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -48,7 +48,7 @@
                                         <td class="li-product-remove"><a href="#" id="btn-delete" data-id="@item.Product.MaSP"><i class="fa fa-times"></i></a></td>
                                         <td class="li-product-thumbnail"><a href="/Product/Detail?id=@item.Product.MaSP"><img src="~/Content/CustomerContent/images/product/large-size/@item.Product.Anh" style="width:150px;height:150px;" alt="Li's Product Image"></a></td>
                                         <td class="li-product-name"><a href="/Product/Detail?id=@item.Product.MaSP">@item.Product.TenSP</a></td>
-                                        <td class="li-product-price"><span class="amount">@item.Product.DonGia.GetValueOrDefault(0)</span></td>
+                                        <td class="li-product-price"><span class="amount">@item.Product.DonGia.GetValueOrDefault(0) VND</span></td>
                                         <td class="quantity">
                                             <div class="cart-plus-minus">
                                                 <input class="cart-plus-minus-box" id="Quantity" value="@item.Quantity" data-id="@item.Product.MaSP" type="text">
@@ -56,7 +56,7 @@
                                                 <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
                                             </div>
                                         </td>
-                                        <td class="product-subtotal"><span class="amount">@(item.Product.DonGia.GetValueOrDefault(0) * item.Quantity)</span></td>
+                                        <td class="product-subtotal"><span class="amount">@(item.Product.DonGia.GetValueOrDefault(0) * item.Quantity) VND</span></td>
                                     </tr>
                                 }            
                             </tbody>
@@ -66,14 +66,14 @@
                         <div class="col-12">
                             <div class="coupon-all">
                                 <div class="coupon">
-                                    <input  class="input-text" name="coupon" id="in" value="" placeholder="Discount code" type="text">
-                                    <input class="button" name="apply_coupon" onclick="validate(coupon)" value=" Apply discount code" type="button">
+                                    <input  class="input-text" name="coupon" id="in" value="" placeholder="Nhập Mã" type="text">
+                                    <input class="button" name="apply_coupon" onclick="validate(coupon)" value=" Xác Nhận Mã Giảm Giá" type="button">
                                     <span id="message"></span>
                                     <span id="err"></span>
 
                                 </div>
                                 <div class="coupon2">
-                                    <input class="button" id="btnUpdate" name="update_cart" value="Update Cart" type="submit">
+                                    <input class="button" id="btnUpdate" name="update_cart" value="Cập Nhật Giỏ Hàng" type="submit">
                                 </div>
                             </div>
                         </div>
@@ -83,10 +83,10 @@
                         {
                             <div class="col-md-5 ml-auto">
                                 <div class="cart-page-total">
-                                    <h2>Total</h2>
+                                    <h2>Hóa Đơn</h2>
                                     <ul>
-                                        <li>Subtotal <span>@(item.Product.DonGia.GetValueOrDefault(0) * item.Quantity)</span></li>
-                                        <li>Total <span>@(item.Product.DonGia.GetValueOrDefault(0) * item.Quantity)</span></li>
+                                        <li>Tổng Thanh Toán: <span>@(item.Product.DonGia.GetValueOrDefault(0) * item.Quantity) VND</span></li>
+                                        <li>Số Tiền Phải Trả : <span>@(item.Product.DonGia.GetValueOrDefault(0) * item.Quantity) VND</span></li>
                                     </ul>
                                     <a href="#" id="btnPayment">Payment</a>
                                 </div>

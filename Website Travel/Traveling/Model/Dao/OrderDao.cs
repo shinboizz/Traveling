@@ -16,5 +16,12 @@ namespace Model.Dao
             db.SaveChanges();
             return order.ID;
         }
+
+        public List<GioHang> GetList()
+        {
+            List<GioHang> list = new List<GioHang>();
+            list = db.GioHangs.ToList();
+            return list;
+        }
     }
 }
